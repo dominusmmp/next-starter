@@ -1,8 +1,36 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
-  content: ["./app/**/*.{ts,tsx,mdx}"],
-  theme: {},
-  plugins: [],
+  content: ['./{app,pages,components}/**/*.{js,jsx,ts,tsx,mdx}'],
+  darkMode: 'class',
+  theme: {
+    container: {
+      center: true,
+    },
+  },
+  plugins: [
+    plugin(({ matchUtilities }) => {
+      matchUtilities(
+        {
+          direction: (value: string) => ({
+            direction: value,
+          }),
+        },
+        {
+          values: {
+            ltr: 'ltr',
+            rtl: 'rtl',
+            inherit: 'inherit',
+            initial: 'initial',
+            revert: 'revert',
+            'revert-layer': 'revert-layer',
+            unset: 'unset',
+          },
+        }
+      );
+    }),
+  ],
 };
+
 export default config;
