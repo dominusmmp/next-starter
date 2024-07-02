@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  next-starter-docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: next-starter-docker
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+    # Optionally add volumes if needed
+    # volumes:
+    #   - ./path/on/host:/app/path/in/container

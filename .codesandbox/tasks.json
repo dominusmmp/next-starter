@@ -1,0 +1,31 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "bun install"
+    }
+  ],
+
+  "tasks": {
+    "dev": {
+      "name": "dev",
+      "command": "bun run dev",
+      "runAtStart": true
+    },
+    "build": {
+      "name": "build",
+      "command": "bun run build",
+      "runAtStart": false
+    },
+    "start": {
+      "name": "start",
+      "command": "bun run start",
+      "runAtStart": false
+    },
+    "lint": {
+      "name": "lint",
+      "command": "bun run lint",
+      "runAtStart": false
+    }
+  }
+}
