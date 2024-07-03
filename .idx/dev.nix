@@ -5,9 +5,6 @@
     pkgs.bun
   ];
   idx.extensions = [ ];
-  env = {
-    PORT = 3000;
-  };
   idx.workspace.onCreate = {
     deps-install = "bun install";
   };
@@ -20,7 +17,7 @@
           "dev"
           "--"
           "--port"
-          "$PORT"
+          "3000"
           "--hostname"
           "0.0.0.0"
         ];
