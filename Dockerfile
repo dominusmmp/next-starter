@@ -1,4 +1,4 @@
-FROM oven/bun:1 AS base
+FROM oven/bun:latest AS base
 WORKDIR /app
 
 # RUN apk add --no-cache libc6-compat
