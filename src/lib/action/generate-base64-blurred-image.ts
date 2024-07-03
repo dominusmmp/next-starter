@@ -12,7 +12,7 @@ interface Options {
   scale?: number;
 }
 
-export async function generateBase64BlurredImage({ url, size, scale = 10 }: Options): Promise<string | null> {
+export async function generateBase64BlurredImage({ url, size, scale = 0.1 }: Options): Promise<string | null> {
   'use server';
 
   try {
@@ -31,8 +31,8 @@ export async function generateBase64BlurredImage({ url, size, scale = 10 }: Opti
     if (!width || !height) throw new Error('Failed to get image metadata!');
 
     const resizeOptions = {
-      width: !size ? Math.floor((width as number) / scale) : size.width,
-      height: !size ? Math.floor((height as number) / scale) : size.height,
+      width: !size ? Math.floor((width as number) * scale) : size.width,
+      height: !size ? Math.floor((height as number) * scale) : size.height,
     };
 
     const blurredBuffer = await image
