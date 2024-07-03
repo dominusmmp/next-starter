@@ -1,6 +1,6 @@
 {
-  "title": "Next.js (App Router, TS)",
-  "description": "This is a Next.js project using Next.js 14 `/app` directory, TailwindCSS, and TypeScript.",
+  "title": "Next.js 15 (TS)",
+  "description": "This is a Next.js project using Next.js latest varsion, TailwindCSS, and TypeScript.",
   "iconUrl": "https://github.com/dominusmmp/next-starter/blob/master/.codesandbox/icon.svg?raw=true",
   "tags": ["nextjs", "react", "typescript", "tailwindcss", "app-router"],
   "published": true
