@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
-  content: ['./{app,pages,components}/**/*.{js,jsx,ts,tsx,mdx}'],
+  content: ['./src/{app,pages,components}/**/*.{js,jsx,ts,tsx,mdx}'],
   darkMode: 'class',
   theme: {
     container: {
