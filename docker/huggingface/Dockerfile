@@ -8,7 +8,6 @@ RUN bun install --frozen-lockfile
 FROM base AS builder
 WORKDIR /base
 
-# COPY . .
 RUN bun run build
 
 FROM builder AS runner
