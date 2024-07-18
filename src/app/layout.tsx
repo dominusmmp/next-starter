@@ -1,9 +1,6 @@
-import { cn } from '@/lib/util/cn';
 import '@/style/globals.css';
+import '@fontsource-variable/inter';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,10 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn(inter.className, inter.variable)}
-    >
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
