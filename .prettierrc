@@ -19,6 +19,6 @@
   "endOfLine": "lf",
   "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-jsdoc", "prettier-plugin-tailwindcss"],
   "tailwindAttributes": ["classNames", "itemClasses"],
-  "tailwindFunctions": ["cn"],
+  "tailwindFunctions": ["cn", "cx", "cva"],
   "overrides": []
 }
