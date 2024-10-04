@@ -1,16 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+This is a [Next.js](https://nextjs.org) project template bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app) using `bun`.
 
 ## Getting Started
 
-First, run the development server:
+First, create a project using this template:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bunx create-next-app@rc -e https://github.com/dominusmmp/next-starter
+```
+
+Then, run the development server:
+
+```bash
 bun dev
 ```
 
