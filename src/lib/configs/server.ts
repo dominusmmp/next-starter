@@ -1,3 +1,5 @@
+import 'server-only';
+
 export const NOD_ENV = process.env.NODE_ENV ?? 'production';
 
 export const STATIC_CACHE_MIN_TTL_DAYS = Number(process.env.NEXT_PUBLIC_STATIC_CACHE_MIN_TTL_DAYS);

@@ -6,7 +6,7 @@
     },
   ],
   "settings": {
-    "npm.packageManager": "bun",
+    "npm.packageManager": "npm",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.preferences.importModuleSpecifier": "shortest",

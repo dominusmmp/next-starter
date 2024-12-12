@@ -1,10 +1,12 @@
+import type { NextConfig } from 'next';
+
 const NOD_ENV = process.env.NODE_ENV ?? 'production';
 
 const STATIC_CACHE_MIN_TTL_DAYS = Number(process.env.NEXT_PUBLIC_STATIC_CACHE_MIN_TTL_DAYS);
 const STATIC_CACHE_MIN_TTL = 60 * 60 * 24 * (!isNaN(STATIC_CACHE_MIN_TTL_DAYS) ? STATIC_CACHE_MIN_TTL_DAYS : 180);
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   images: {
