@@ -2,16 +2,40 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### With `bun`
+
+First, execute create-next-app to bootstrap the example:
+
+```bash
+bunx create-next-app@latest -e https://github.com/dominusmmp/next-starter
+```
+
+Then run the development server:
+
+```bash
+cd <project-folder> && bun dev
+```
+
+### With `npm`
+
+First, execute create-next-app to bootstrap the example:
+
+```bash
+npx create-next-app@latest -e https://github.com/dominusmmp/next-starter --skip-install
+```
+
+- `--skip-install` for peer dependency conflict due to React.js 19 and TailwindCSS 4.
+
+Then install dependencies:
+
+```bash
+cd <project-folder> && npm i --legacy-peer-deps
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
