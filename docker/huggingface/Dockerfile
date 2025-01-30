@@ -10,11 +10,11 @@ WORKDIR /base
 
 RUN bun run build
 
-FROM builder AS runner
+FROM oven/bun:alpine AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -34,7 +34,7 @@ USER nextjs
 
 EXPOSE 7860
 
-ENV HOSTNAME 0.0.0.0
-ENV PORT 7860
+ENV HOSTNAME=0.0.0.0
+ENV PORT=7860
 
 CMD ["bun", "server.js"]

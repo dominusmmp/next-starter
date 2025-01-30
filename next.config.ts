@@ -9,6 +9,10 @@ const STATIC_CACHE_MIN_TTL = 60 * 60 * 24 * (!isNaN(STATIC_CACHE_MIN_TTL_DAYS) ?
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'standalone',
+  experimental: {
+    reactCompiler: true,
+    authInterrupts: true,
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: NOD_ENV === 'production' ? STATIC_CACHE_MIN_TTL : undefined,

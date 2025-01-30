@@ -1,20 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+/* TailwindCSS Config */
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin "@tailwindcss/typography";
+@plugin "tailwindcss-animate";
+
+/* Root Colors (Light and Dark mode) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-white);
+  --foreground: var(--color-gray-950);
+}
+
+.dark:root,
+[data-theme='dark']:root {
+  --background: var(--color-gray-950);
+  --foreground: var(--color-white);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-gray-950);
+    --foreground: var(--color-white);
   }
 }
 
+@theme {
+  /* TailwindCSS Fonts */
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* TailwindCSS Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* Theme CSS code */
 html,
 body {
-  @apply min-h-dvh scroll-smooth bg-background font-sans text-foreground antialiased;
+  @apply bg-background text-foreground min-h-dvh scroll-smooth font-sans antialiased;
 }
