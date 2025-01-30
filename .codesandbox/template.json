@@ -1,6 +1,6 @@
 {
   "title": "Next.js 15 (TS)",
-  "description": "Next.js 15 Project Starter (React.js 19, TailwindCSS, TypeScript).",
+  "description": "Next.js 15 Project Starter (React.js 19, TailwindCSS 4, TypeScript).",
   "iconUrl": "https://github.com/dominusmmp/next-starter/blob/master/.codesandbox/icon.svg?raw=true",
   "tags": ["nextjs", "react", "typescript", "tailwindcss", "app-router"],
   "published": true
