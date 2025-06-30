@@ -1,4 +1,4 @@
-FROM oven/bun:latest AS base
+FROM oven/bun:alpine AS base
 WORKDIR /base
 
 # RUN apk add --no-cache libc6-compat
@@ -12,8 +12,7 @@ RUN bun install --frozen-lockfile
 COPY . .
 RUN bun run build
 
-# Production image
-FROM oven/bun:latest AS runner
+FROM oven/bun:alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production

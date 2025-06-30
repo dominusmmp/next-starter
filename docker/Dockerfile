@@ -10,8 +10,7 @@ WORKDIR /base
 
 RUN bun run build
 
-# Production image
-FROM oven/bun:latest AS runner
+FROM oven/bun:alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -33,9 +32,9 @@ COPY --from=builder --chown=nextjs:nodejs /base/.next/static ./.next/static
 
 USER nextjs
 
+# Expose the port the app runs on (default is 3000. Use 7860 for Hugging Face.)
 EXPOSE 3000
-
-ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
 
 CMD ["bun", "server.js"]

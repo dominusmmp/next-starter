@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 import js from '@eslint/js';
 import ts from 'typescript-eslint';
-// import tailwind from 'eslint-plugin-tailwindcss';
+// import tailwind from 'eslint-plugin-tailwindcss'; // better to use but has conflict with tailwindcss 4 as of now
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -28,7 +28,6 @@ const eslintConfig = [
       '*.md',
     ],
   },
-  // ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier', 'plugin:tailwindcss/recommended'),
   ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
   js.configs.recommended,
   ...ts.configs.recommended,
