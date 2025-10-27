@@ -7,10 +7,11 @@ const STATIC_CACHE_MIN_TTL_DAYS = !isNaN(STATIC_CACHE_MIN_TTL_DAYS_RAW) ? STATIC
 const STATIC_CACHE_MIN_TTL = STATIC_CACHE_MIN_TTL_DAYS * 60 * 60 * 24;
 
 const nextConfig: NextConfig = {
+  // output: 'standalone',
   reactStrictMode: true,
-  output: 'standalone',
+  reactCompiler: true,
+  cacheComponents: true,
   experimental: {
-    reactCompiler: true,
     authInterrupts: true,
   },
   images: {
@@ -24,14 +25,6 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  webpack: config => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': './src',
-      $: './public',
-    };
-    return config;
   },
   logging: {
     fetches: {

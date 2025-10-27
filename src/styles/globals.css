@@ -1,20 +1,19 @@
 @import 'tailwindcss';
 
-/* TailwindCSS Plugins */
-@plugin "@tailwindcss/typography";
+/* TailwindCSS Plugins and Config */
+@plugin '@tailwindcss/typography';
 @plugin 'tailwind-scrollbar';
 
-/* TailwindCSS Config */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Root Colors (Light and Dark mode) */
+/* Colors (Light and Dark mode) */
 :root {
   --background: var(--color-white);
   --foreground: var(--color-gray-950);
 }
 
-.dark:root,
-[data-theme='dark']:root {
+.dark,
+[data-theme='dark'] {
   --background: var(--color-gray-950);
   --foreground: var(--color-white);
 }
@@ -26,7 +25,7 @@
   }
 }
 
-/* TailwindCSS Theme Settings */
+/* Theme Settings */
 @theme inline {
   /* Fonts */
   --font-sans:
@@ -40,8 +39,9 @@
   --color-foreground: var(--foreground);
 }
 
-/* Global Styles */
-html,
-body {
-  @apply bg-background text-foreground min-h-dvh scroll-smooth font-sans antialiased;
+@layer base {
+  html,
+  body {
+    @apply bg-background text-foreground flex min-h-dvh max-w-dvw flex-col scroll-smooth font-sans antialiased;
+  }
 }
