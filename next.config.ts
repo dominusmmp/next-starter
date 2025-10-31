@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 
 // Ensure that the environment variable is accessible in the build process
 const NODE_ENV = process.env.NODE_ENV ?? 'production';
-const STATIC_CACHE_MIN_TTL_DAYS_RAW = Number(process.env.NEXT_PUBLIC_STATIC_CACHE_MIN_TTL_DAYS);
+const STATIC_CACHE_MIN_TTL_DAYS_RAW = Number(process.env.NEXT_PUBLIC_STATIC_CACHE_MIN_TTL_DAYS || 180);
 const STATIC_CACHE_MIN_TTL_DAYS = !isNaN(STATIC_CACHE_MIN_TTL_DAYS_RAW) ? STATIC_CACHE_MIN_TTL_DAYS_RAW : 180;
 const STATIC_CACHE_MIN_TTL = STATIC_CACHE_MIN_TTL_DAYS * 60 * 60 * 24;
 
