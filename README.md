@@ -2,47 +2,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-### With `bun`
-
-First, execute create-next-app to bootstrap the example:
+Execute create-next-app to bootstrap the example:
 
 ```bash
-bunx create-next-app@latest -e https://github.com/dominusmmp/next-starter
+npx create-next-app@latest -e https://github.com/dominusmmp/next-starter
 ```
 
-Then run the development server:
+Run the development server:
 
 ```bash
-cd <project-folder> && bun dev
-```
-
-### With `npm`
-
-First, execute create-next-app to bootstrap the example:
-
-```bash
-npx create-next-app@latest -e https://github.com/dominusmmp/next-starter --skip-install
-```
-
-- `--skip-install` for peer dependency conflict due to React.js 19 and TailwindCSS 4.
-
-Then install dependencies:
-
-```bash
-cd <project-folder> && npm i --legacy-peer-deps
-```
-
-Then run the development server:
-
-```bash
-npm run dev
+cd <project-folder> && npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
